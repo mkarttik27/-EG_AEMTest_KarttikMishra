@@ -1,0 +1,27 @@
+<sly class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Read Magnon Config"></sly>
+
+<sly data-sly-use.magnonConfig="com.website.magnon.egplus.core.models.ReadMagnonConfigModel"/>
+This the Read Magnon Config component and is used to read the configurations from Magnon Eg Plus configuration.<br/>
+To fetch the values and fill against the values below, configure the Magnon Eg Plus configuration by clicking 
+<a href="http://localhost:4502/system/console/configMgr" target="_blank">here.</a> <br/> <br/>
+
+
+<b>Address:</b> ${magnonConfig.getMagnonIndiaAddress}<br/>
+<b>Contact Number:</b> ${magnonConfig.getMagnonIndiaContactNumber}<br/>
+<b>Employee Name:</b> ${magnonConfig.getMagnonEmployeeName}<br/>
+<b>Employee Location:</b> ${magnonConfig.getMagnonEmployeeLocation}<br/><br/>
+
+<b> Highlights of this implementation: </b>
+<ul>
+	<li>
+		The component makes use of the latest OSGI annotations over the obsolete felix annotations to create the component(s)/service(s) and the configurations.
+	</li>
+	<li>
+		The Sling Model Exporter framework has been used instead of the plain old Sling Models. <br>
+		This provides the ability to get the business view of the component and not only the authored properties. <br>
+		In this case, the authored text can be large article but its business view returns truncated summary of the same.<br>
+		To see the basic component properties view, click <a href="http://localhost:4502/content/magnonegplus/en/_jcr_content/par/readmagnonconfig.tidy.json" target="_blank">here.</a><br>
+		To see the busniess view of this component, click <a href="http://localhost:4502/content/magnonegplus/en/jcr:content/par/readmagnonconfig.model.tidy.json" target="_blank">here.</a><br>
+	</li>
+</ul>
+

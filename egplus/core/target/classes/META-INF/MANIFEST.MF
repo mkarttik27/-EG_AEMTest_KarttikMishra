@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1516695866471
+Build-Jdk: 1.8.0_131
+Built-By: karttik.mishra
+Bundle-Description: Core bundle for Magnon Eg Plus
+Bundle-ManifestVersion: 2
+Bundle-Name: Magnon Eg Plus - Core
+Bundle-SymbolicName: com.website.magnon.egplus.core
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.website.magnon.egplus.core.configurations;version="0
+ .0.1",com.website.magnon.egplus.core.models;version="0.0.1",com.website
+ .magnon.egplus.core;version="1.0",com.website.magnon.egplus.core.servic
+ es;version="0.0.1",com.website.magnon.egplus.core.servlets;uses:="javax
+ .servlet,org.apache.sling.api,org.apache.sling.api.servlets";version="0
+ .0.1"
+Import-Package: com.day.cq.commons;version="[6.0,7)",com.day.cq.tagging;
+ version="[5.8,6)",com.website.magnon.egplus.core.configurations,com.web
+ site.magnon.egplus.core.models,com.website.magnon.egplus.core.services,
+ javax.servlet,org.apache.sling.api;version="[2.3,3)",org.apache.sling.a
+ pi.resource;version="[2.10,3)",org.apache.sling.api.servlets;version="[
+ 2.2,3)",org.apache.sling.models.annotations;version="[1.4,2)",org.apach
+ e.sling.models.annotations.injectorspecific;version="[1.1,2)",org.osgi.
+ framework;version="[1.5,2)",org.slf4j;version="[1.5,2)"
+Provide-Capability: osgi.service;objectClass:List<String>="com.website.m
+ agnon.egplus.core.configurations.MagnonConfigService",osgi.service;obje
+ ctClass:List<String>="com.website.magnon.egplus.core.services.ImageList
+ ingService"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compone
+ nt)(version>=1.3.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=Ja
+ vaSE)(version=1.6))"
+Service-Component: OSGI-INF/com.website.magnon.egplus.core.servlets.Simp
+ leServlet.xml,OSGI-INF/com.website.magnon.egplus.core.configurations.Ma
+ gnonConfigServiceImpl.xml,OSGI-INF/com.website.magnon.egplus.core.servi
+ ces.impl.ImageListingServiceImpl.xml
+Sling-Model-Packages: com.website.magnon.egplus.core
+Tool: Bnd-3.3.0.201609221906
